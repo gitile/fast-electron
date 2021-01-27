@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>火速应用</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body class="fastui-body">
+	<div class="fastui-nav">
+		<div class="fastui-nav-list">
+			<a id="closeWindowNav" class="fastui-nav-item fastui-close">
+				<img src="./assets/images/icon-close.png" />
+			</a>
+			<a id="maxWindowNav" class="fastui-nav-item">
+				<img src="./assets/images/icon-max.png" />
+			</a>
+			<a id="resetWindowNav" class="fastui-nav-item fastui-hide">
+				<img src="./assets/images/icon-reset.png" />
+			</a>
+			<a id="minWindowNav" class="fastui-nav-item">
+				<img src="./assets/images/icon-min.png" />
+			</a>
+			<a id="homeWindowNav" class="fastui-nav-item">
+				<img src="./assets/images/icon-home.png" />
+			</a>
+			<a id="refreshWindowNav" class="fastui-nav-item">
+				<img id="refreshImage" src="./assets/images/icon-refresh.png" />
+			</a>
+		</div>
+	</div>
+	<!--useragent="Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like FastOA"-->
+    <webview id="browser" class="fastui-webview" ></webview>
+	<script>
+        require('./assets/js/index.js')
+    </script>
+  </body>
+</html>

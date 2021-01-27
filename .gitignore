@@ -1,0 +1,5 @@
+# Node.js Files #
+node_modules
+.tmp
+# Electron Files #
+out
