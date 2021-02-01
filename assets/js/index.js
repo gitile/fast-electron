@@ -6,6 +6,7 @@ var $ = require('jquery');
 var FastWebView = {
     initUrl: '',
     lastUrl: '',
+	offline: false,
     init: function() {
         let _this = this;
         // 获取到对应的webview 
@@ -97,9 +98,23 @@ var FastWebView = {
     },
     jumpUrl: function(url) {
         $('#browser').attr("src", url)
-    }
+    },
+	initWindow: function() {
+		let _this = this;
+		window.addEventListener('online', function() {
+			if(_this.offline) {
+				_this.offline = false;
+				_this.jumpUrl(_this.lastUrl)
+			}
+		})
+		window.addEventListener('offline', function() {
+			_this.offline = true;
+		})
+	}
 }
 // 加载配置文件
 FastWebView.readConfigFile(function(){
     FastWebView.init()
+	FastWebView.initWindow()
 });
+

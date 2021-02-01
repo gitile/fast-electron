@@ -43,7 +43,7 @@ var FastApp = {
           }
         })
         // 创建Ipc通讯
-         _this.initIpc()
+         _this.initIpc();
     },
     initIpc: function() {
         //主进程渲染器操作
