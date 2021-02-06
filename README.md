@@ -6,7 +6,7 @@
 #### 安装教程
 
 1.  git clone https://github.com/gitile/fast-electron.git
-2.  cd electron-quick-start
+2.  cd fast-electron
 3.  npm install
 4.  npm start
 
